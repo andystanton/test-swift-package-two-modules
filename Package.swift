@@ -8,8 +8,12 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "test-swift-package-two-modules",
-            targets: ["test-swift-package-module-1", "test-swift-package-module-2"]),
+            name: "test-swift-package-module-1",
+            targets: ["test-swift-package-module-1"]),
+        .library(
+            name: "test-swift-package-module-2",
+            targets: ["test-swift-package-module-2"]),
+
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
