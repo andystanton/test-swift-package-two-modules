@@ -4,24 +4,24 @@
 import PackageDescription
 
 let package = Package(
-    name: "test-swift-package-two-modules",
+    name: "TestSwiftPackageTwoModules",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "test-swift-package-module-1",
-            targets: ["test-swift-package-module-1"]),
+            name: "TestSwiftPackageModule1",
+            targets: ["TestSwiftPackageModule1"]),
         .library(
-            name: "test-swift-package-module-2",
-            targets: ["test-swift-package-module-2"]),
+            name: "TestSwiftPackageModule2",
+            targets: ["TestSwiftPackageModule2"]),
 
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "test-swift-package-module-1",
-            dependencies: ["test-swift-package-module-2"]),
+            name: "TestSwiftPackageModule1",
+            dependencies: ["TestSwiftPackageModule2"]),
         .target(
-            name: "test-swift-package-module-2"),
+            name: "TestSwiftPackageModule2"),
     ]
 )
